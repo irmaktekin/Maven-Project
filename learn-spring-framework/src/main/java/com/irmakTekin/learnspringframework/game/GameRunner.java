@@ -1,17 +1,21 @@
 package com.irmakTekin.learnspringframework.game;
 
 public class GameRunner {
-	private MarioGame game;
+	//Changing this to
+	//private MarioGame game;
+	//this
+	//It is tightly coupled with the SuperContraGame object
+	private GamingConsole gamingConsole;
 
 
-	public GameRunner(MarioGame game) {
-		this.game=game;
+	public GameRunner(GamingConsole game) {
+		this.gamingConsole=game;
 	}
 	public void runGame() {
-		game.up();
-		game.down();
-		game.left();
-		game.right();
+		gamingConsole.up();
+		gamingConsole.down();
+		gamingConsole.left();
+		gamingConsole.right();
 		
 		
 	}
