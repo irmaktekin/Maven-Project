@@ -10,13 +10,25 @@ public class GameRunner {
 	//this
 	//It is tightly coupled with the SuperContraGame object
 	
-	@Autowired
+	
+	
+	//@Autowired
 	private GamingConsole gamingConsole;
+	
+	
+	//injection via setter
+	
+	/*@Autowired
+	public void setGamingConsole(GamingConsole gamingConsole) {
+		this.gamingConsole = gamingConsole;
+		System.out.println("Setter injection");
+	}*/
 
 
-	public GameRunner(GamingConsole game) {
+	//injection via constructor
+	/*public GameRunner(GamingConsole game) {
 		this.gamingConsole=game;
-	}
+	}*/
 	public void runGame() {
 		gamingConsole.up();
 		gamingConsole.down();
