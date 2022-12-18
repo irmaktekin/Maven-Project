@@ -1,5 +1,10 @@
 package com.irmakTekin.learnspringframework.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+
 public class SuperContraGame implements GamingConsole{
 	//when the up button is pressed
 	public void up() {
