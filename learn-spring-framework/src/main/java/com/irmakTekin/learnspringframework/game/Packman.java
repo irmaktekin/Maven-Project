@@ -1,4 +1,4 @@
-package com.irmakTekin.learnspringframework.game;
+/*package com.irmakTekin.learnspringframework.game;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
@@ -28,3 +28,4 @@ public class Packman implements GamingConsole {
 	}
 
 }
+*/

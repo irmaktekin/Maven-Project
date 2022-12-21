@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 
 //You need to manage this component
-@Component
+//@Component
 public class MarioGame implements GamingConsole {
 	
 	//when the up button is pressed

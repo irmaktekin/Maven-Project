@@ -1,3 +1,4 @@
+/*
 package com.irmakTekin.learnspringframework;
 
 import org.springframework.boot.SpringApplication;
@@ -14,12 +15,14 @@ public class LearnSpringFrameworkApplication {
 		GameRunner runner = context.getBean(GameRunner.class);
 		
 		
-		//MarioGame game = new MarioGame();
+		//var game = new MarioGame();
 		
-		//SuperContraGame game = new SuperContraGame();
-		//GameRunner runner= new GameRunner(game);
+		//var game = new SuperContraGame();
+		//var runner= new GameRunner(game);//wiring dependency
+		//Game is a dependency for runner class
 		runner.runGame();
 				
 	}
 
 }
+*/

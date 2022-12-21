@@ -3,7 +3,7 @@ package com.irmakTekin.learnspringframework.game;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class GameRunner {
 	//Changing this to
 	//private MarioGame game;
@@ -26,9 +26,9 @@ public class GameRunner {
 
 
 	//injection via constructor
-	/*public GameRunner(GamingConsole game) {
+	public GameRunner(GamingConsole game) {
 		this.gamingConsole=game;
-	}*/
+	}
 	public void runGame() {
 		gamingConsole.up();
 		gamingConsole.down();
