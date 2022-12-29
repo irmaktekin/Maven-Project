@@ -1,6 +1,8 @@
-package com.irmak.springboot.learnjpahibernate.course.jdbc;
+package jpa;
 
 import org.springframework.stereotype.Repository;
+
+import com.irmak.springboot.learnjpahibernate.Course;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
