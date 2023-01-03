@@ -1,5 +1,7 @@
 package com.irmaktekin.springboot.myfirstwebapp.hello;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class SayHelloController {
+	private Logger logger = LoggerFactory.getLogger(getClass());
+	
 	
 	@RequestMapping("say-hello")
 	@ResponseBody
@@ -36,7 +40,8 @@ public class SayHelloController {
 	public String sayHelloJsp(@RequestParam String name, ModelMap model) {
 		//we can use name in jsp now
 		model.put("name", name);
-		System.out.println("request param is"+ name);
+		logger.debug("Request param is {}",name);
+		System.out.println("Request param is"+name); //not recommended for production
 		return "sayHello";
 	}
 
