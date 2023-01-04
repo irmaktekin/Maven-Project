@@ -28,7 +28,6 @@ public class LoginController {
 	public String goToWelcomePage(@RequestParam String name,@RequestParam String password,ModelMap model) {
 	if(authenticationService.authenticate(name, password)) {
 		model.put("name", name);	
-		model.put("password", password);
 		
 		//Authentication
 		//name-irmaktekin
@@ -37,6 +36,8 @@ public class LoginController {
 		
 	}
 	else {
+		model.put("errorMessage","Invalid Credentials! Please try again");
+		
 		return "login";
 	}
 	
