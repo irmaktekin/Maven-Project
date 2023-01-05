@@ -4,8 +4,5 @@
 	</head>
 	<body>
 My first html page with body. ${name}
-
-
-
 	</body>
 </html>
