@@ -3,6 +3,8 @@ package com.irmaktekin.springboot.myfirstwebapp.todo;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -24,11 +26,13 @@ public class ToDoController {
 	// /list-todos
 	@RequestMapping("list-todos")
 	public String listAllTodos(ModelMap model) {
+		getLoggedInUsername(model);
 		List <ToDo> todos=todoService.findByUsername("irmaktekin");
 		model.addAttribute("todos",todos);
 		return "listTodos";
 		
 	}
+	
 	
 	//GET
 	@RequestMapping(value="add-todo", method=RequestMethod.GET)
@@ -84,5 +88,9 @@ public class ToDoController {
 			
 		}
 		
-
+		private String getLoggedInUsername(ModelMap model) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			return authentication.getName();
+			
+		}
 }
