@@ -2,7 +2,8 @@ package com.irmaktekin.springboot.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
+import org.springframework.stereotype.Service;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,7 +12,7 @@ import jakarta.validation.constraints.Size;
 //JPA
 //Bean -> Database
 
-@Entity(name="todo")
+@Entity
 public class ToDo {
 	
 	@Id
@@ -24,6 +25,10 @@ public class ToDo {
 	private String description ; 
 	private LocalDate targetDate ; 
 	private boolean done ;
+	
+	public ToDo() {
+		
+	}
 	public ToDo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
