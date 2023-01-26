@@ -1,4 +1,4 @@
-package com.irmaktekin.springboot.myfirstwebapp.todo;
+package com.irmaktekin.springboot.myfirstwebapp.hello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

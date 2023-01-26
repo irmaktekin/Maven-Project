@@ -21,6 +21,11 @@ public class ToDoControllerJpa {
 	private ToDoService todoService;
 	private TodoRepository todoRepository;
 	
+	public ToDoControllerJpa() {
+		
+	}
+	
+	
 	public ToDoControllerJpa(ToDoService todoService, TodoRepository todoRepository) {
 		super();
 		this.todoService = todoService;
