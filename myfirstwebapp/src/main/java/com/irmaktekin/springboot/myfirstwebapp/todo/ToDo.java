@@ -25,9 +25,6 @@ public class ToDo {
 	private LocalDate targetDate ; 
 	private boolean done ;
 	
-	public ToDo() {
-		
-	}
 	public ToDo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;

@@ -24,7 +24,11 @@ public class CourseCommandLineRunner implements CommandLineRunner {
 		repository.save(new Course(1,"Learn AWS JPA Now","irmaktekin"));
 		repository.save(new Course(2,"Learn Cloud JPANow","irmaktekin"));
 		System.out.println(repository.findById(2l));
-		
+		System.out.println(repository.findAll());
+		System.out.println(repository.count());
+		System.out.println(repository.findByAuthor("irmaktekin"));
+
+
 	}
 
 }

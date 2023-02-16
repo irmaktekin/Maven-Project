@@ -51,15 +51,16 @@ public class ToDoControllerJpa {
 		return "todo";
 		
 	}
-	//post
+	//add new todo
 		@RequestMapping(value="add-todo", method=RequestMethod.POST)
 		public String addNewTodo(ModelMap model, @Valid ToDo todo, BindingResult result) {
 			if(result.hasErrors()) {
 				model.put("todo", todo);
 				return "todo";
 			}
-			String username = (String)model.get("name");
-			todoService.addTodo(username,todo.getDescription(),todo.getTargetDate(),false);		
+			String username = (getLoggedInUsername(model));
+			todo.setUsername(username);
+			todoRepository.save(todo);
 			return "redirect:list-todos"; 
 			
 		}
